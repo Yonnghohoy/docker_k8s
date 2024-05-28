@@ -83,5 +83,8 @@ docker run -d -p 8080:8080 my-node-app:v1
 
 IP주소:8080 으로 접속 했을 시 호스트명이 달라지는걸 확인할 수 있다.
 ===================================================================
+![스크린샷 2024-05-28 134742](https://github.com/Yonnghohoy/docker_k8s/assets/88643834/ccafeddf-1fdd-4c14-9090-ff0cd8499958)
 
+
+![스크린샷 2024-05-28 144723](https://github.com/Yonnghohoy/docker_k8s/assets/88643834/6eab5829-53d8-4509-a979-5284e30a3488)
 
