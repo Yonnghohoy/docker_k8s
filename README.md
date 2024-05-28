@@ -1,11 +1,11 @@
 # Replication Controller를 이용하여 서비스 배포하기
 
-Docker 이미지 빌드
-ECR 설정 및 이미지 푸시
-EKS 클러스터 생성 및 설정
-Kubernetes Deployment 및 Service YAML 파일 작성
-Deployment 및 Service 적용
-서비스 상태 확인
+1. Docker 이미지 빌드
+2. ECR 설정 및 이미지 푸시
+3. EKS 클러스터 생성 및 설정
+4. Kubernetes Deployment 및 Service YAML 파일 작성
+5. Deployment 및 Service 적용
+6. 서비스 상태 확인
 
 #OS : rocky 8.8
 #Docker version :  26.1.3, build b72abbb
