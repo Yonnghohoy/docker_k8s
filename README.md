@@ -45,7 +45,7 @@ WorkingDirectory=/home/sjh/docker_k8s
 [Install]
 WantedBy=multi-user.target
 ===================================================================
-g
+
 등록후 데몬 재실행 및 server.js를 실행 및 enable한다.
 systemctl daemon-reload
 systemctl start nodejs-app.service
