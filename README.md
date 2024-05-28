@@ -50,3 +50,9 @@ WantedBy=multi-user.target
 systemctl daemon-reload
 systemctl start nodejs-app.service
 systemctl enable nodejs-app.service
+
+
+
+도커로 패키징하기
+===================================================================
+그러면 이 node.js 애플리케이션을 도커 컨테이너로 패키징 해보자Dockerfile 이라는 파일을 만들고 아래 코드를 작성한다.FROM node:carbonEXPOSE 8080COPY server.js .CMD node server.js > log.out
