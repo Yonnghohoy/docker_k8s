@@ -7,9 +7,8 @@
 # Nodejs 웹 어플리케이션 구성
 
 server.js라는 이름으로 아래 코드를 작성한다.
-
-/home/sjh/docker_k8s/server.js
 ===================================================================
+/home/sjh/docker_k8s/server.js
 var os = require('os');
 var http = require('http');
 
@@ -22,12 +21,12 @@ var handleRequest = function(request, response) {
 
 var www = http.createServer(handleRequest);
 www.listen(8080);
-===================================================================
+
 
 이 코드는 8080 포트로 웹서버를 띄워서 접속하면 “Hello World!” 문자열과 함께, 서버의 호스트명을 출력해준다. 그리고 stdout에 로그로, 시간과 서버의 호스트명을 출력해준다.
 그리고 systemd에 등록한다.
+
 vi /etc/systemd/system/nodejs-app.service
-===================================================================
 
 [Unit]
 Description=Node.js server
@@ -44,7 +43,7 @@ WorkingDirectory=/home/sjh/docker_k8s
 
 [Install]
 WantedBy=multi-user.target
-===================================================================
+
 
 등록후 데몬 재실행 및 server.js를 실행 및 enable한다.
 systemctl daemon-reload
