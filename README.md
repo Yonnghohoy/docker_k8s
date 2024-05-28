@@ -55,4 +55,33 @@ systemctl enable nodejs-app.service
 
 도커로 패키징하기
 ===================================================================
-그러면 이 node.js 애플리케이션을 도커 컨테이너로 패키징 해보자Dockerfile 이라는 파일을 만들고 아래 코드를 작성한다.FROM node:carbonEXPOSE 8080COPY server.js .CMD node server.js > log.out
+node.js 애플리케이션을 도커 컨테이너로 패키징 한다.
+Dockerfile 이라는 파일을 만들고 아래 코드를 작성한다.
+
+# Base image
+FROM node:carbon
+
+# Set working directory
+WORKDIR /usr/src/app
+
+# Copy server.js to the working directory
+COPY server.js .
+
+# Expose port 8080
+EXPOSE 8080
+
+# Run the application
+CMD ["sh", "-c", "node server.js > log.out"]
+
+
+docker build 명령어로 이미지를 빌드 후 실행한다.
+===================================================================
+docker build -t my-node-app:v1 .
+docker run -d -p 8080:8080 my-node-app:v1
+
+
+
+IP주소:8080 으로 접속 했을 시 호스트명이 달라지는걸 확인할 수 있다.
+===================================================================
+
+
