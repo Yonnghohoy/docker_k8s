@@ -46,6 +46,7 @@ WantedBy=multi-user.target
 
 
 등록후 데몬 재실행 및 server.js를 실행 및 enable한다.
+===================================================================
 systemctl daemon-reload
 systemctl start nodejs-app.service
 systemctl enable nodejs-app.service
